@@ -1,0 +1,8 @@
+- name: Run application
+  docker_container:
+    name: app
+    image: ghcr.io/vlc3k/kiv-dce-ex01:main
+    state: started
+    restart_policy: unless-stopped
+    ports:
+      - "5000:5000"

@@ -1,0 +1,15 @@
+# Cluster init
+---
+  - name: App init
+    hosts: app
+    become: true
+    roles:
+      - docker
+      - app
+  
+  - name: LoadBalancer init
+    hosts: loadbalancer
+    become: true
+    roles:
+      - docker
+      - loadbalancer
